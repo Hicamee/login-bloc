@@ -1,0 +1,367 @@
+/* Базовые стили для страницы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Устанавливаем шрифт для всего документа */
+body {
+  font-family: Arial, sans-serif; /* Основной шрифт */
+  line-height: 1.6; /* Интерлиньяж для улучшения читаемости */
+  background-color: #f4f4f4; /* Светлый фон для страницы */
+  color: #333; /* Темный цвет текста */
+  padding: 20px; /* Отступы вокруг контента */
+}
+
+/* Основной контейнер для контента */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрируем контейнер по горизонтали */
+  padding: 20px;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px; /* Отступ снизу */
+  color: #222; /* Темный цвет для заголовков */
+}
+
+/* Параграфы */
+p {
+  text-align: center;
+  margin-bottom: 1px; /* Отступ снизу для параграфов */
+  font-size: 1rem;
+  color: #555; /* Более светлый цвет для текста */
+}
+
+/* Ссылки */
+a {
+  justify-content: center;
+  color: rgba(45, 29, 74, 1); /* Синий цвет для ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9; /* Темный синий цвет при наведении */
+}
+
+/* Кнопки */
+button {
+  background-color: #3498db; /* Синий фон кнопки */
+  color: white; /* Белый текст */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Скругленные углы */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fb8e8e;/* Более темный синий при наведении */
+}
+
+/* Формы */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Светлый серый бордер */
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3498db; /* Синий бордер при фокусе */
+  outline: none; /* Убираем стандартный контур */
+}
+
+/* Сеточная система */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Перенос элементов на новую строку */
+  gap: 20px; /* Отступы между колонками */
+}
+
+.col {
+  flex: 1 1 100%; /* Колонки занимают всю ширину по умолчанию */
+}
+
+@media (min-width: 768px) {
+  .col {
+      flex: 1 1 calc(33.333% - 20px); /* 3 колонки на экранах от 768px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .col {
+      flex: 1 1 calc(25% - 20px); /* 4 колонки на экранах от 1024px */
+  }
+}
+
+
+
+/* ФОН */
+/* ФОН */
+/* ФОН */
+/* ФОН */
+/* ФОН */
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden; /* Убираем возможные прокрутки */
+}
+
+/* Псевдоэлемент для размытого фона */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+      #fff,
+      #f4a5cb,
+      #f98799,
+      #f8a8aa,
+      #fb8e8e,
+      #fff
+  );
+  filter: blur(2px); /* Применяем размытие 2px */
+  z-index: -1; /* Отправляем на задний план */
+}
+
+/* Стиль для текста */
+.content {
+  position: relative; /* Текст остается поверх фона */
+  text-align: center;
+  color: #333;
+}
+
+/* ФОН */
+/* ФОН */
+/* ФОН */
+/* ФОН */
+/* ФОН */
+
+
+/* Кнопка с галочкой типо */
+/* Кнопка с галочкой типо */
+/* Кнопка с галочкой типо */
+.checkbox {
+  display: none;
+}
+
+/* Стили для кнопки */
+.button {
+  display: inline-block;
+  padding: 10px 10px;
+  height: 10px;
+  background-color: #e6dedf; /* Исходный цвет */
+  color: white;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #555;
+  transition: background-color 0.6s ease;
+  margin-right: 10px;
+}
+
+/* Если чекбокс отмечен, меняем цвет кнопки */
+.checkbox:checked + .button {
+  background-color: #fb8e8e; /* Зеленый цвет после клика */
+}
+
+/* Кнопка с галочкой типо */
+/* Кнопка с галочкой типо */
+/* Кнопка с галочкой типо */
+
+.container {
+  width: 400px;
+  height: 700px;
+  background-color: #222;
+  background: rgba(255, 255, 255, 0.1); /* Прозрачный фон с оттенком синего */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(34, 33, 33, 0.123);
+}
+
+h1 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: rgba(45, 29, 74, 1);
+}
+
+p {
+  color: rgba(45, 29, 74, 1);
+}
+
+.knopka {
+  display: flex;
+}
+
+.knopka_2 button {
+  width: 250px;
+  height: 45px;
+  margin: 10px 40px;
+  background-color: rgba(73, 29, 90, 1);
+  border-radius: 13px;
+  transition: background-color 0.7s ease;
+}
+
+.knopka_2 button:hover {
+  background-color: #fb8e8e;
+}
+
+.vv {
+  font-size: 0.8rem;
+}
+
+.vv a {
+  margin: 2px 117px;
+}
+
+.vv a:hover {
+  color: #ffffff;
+}
+
+.ttt {
+  width: 20px;
+}
+
+.bbb {
+  background-color: hsla(0, 4%, 74%, 0.158);
+  border-radius: 20px;
+}
+
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 300px;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  background-color: hsla(0, 10%, 83%, 0.158);
+}
+input::placeholder {
+  color: #3b3232;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+
+
+/* hr Or hr */
+/* hr Or hr */
+/* hr Or hr */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  border: 0;
+  border-top: 1px solid rgba(152, 106, 132, 1);; /* Цвет линии */
+  margin: 0 10px; /* Отступы между линией и текстом */
+}
+
+.separator span {
+  font-size: 1rem;
+  color: #333; /* Цвет текста */
+  text-align: center;
+}
+/* hr Or hr */
+/* hr Or hr */
+/* hr Or hr */
+
+.button_2 {
+  display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center;
+}
+
+.button_1 {
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center;
+  border-radius: 15px;
+  background-color: hsla(0, 0%, 99%, 0.5);
+}
+
+.button_1 img {
+  width: 20px;
+  justify-content: left;
+  border-radius: 15px;
+}
+
+.ttt_1 {
+  width: 20px;
+  margin-left: -10px;
+}
+
+.button_1 span {
+  color: rgba(45, 29, 74, 1);
+  margin-left: 10px;
+}
+
+.iii {
+  margin-top: 10px;
+}
+
+.iii a {
+  font-size: 0.8rem;
+  color: rgba(45, 29, 74, 1);
+  margin: 30px 70px;
+  margin-top: -10px;
+}
+
+.iii a:hover {
+  color: #fff;
+}
+
+@media (max-width: 440px) {
+  .vv {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width:360px;
+  }
+  
+  .vv a {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-left: 100px;
+  }
+}
